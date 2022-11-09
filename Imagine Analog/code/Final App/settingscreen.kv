@@ -1,0 +1,143 @@
+<SettingsScreen>
+    name: "setting"
+    canvas:
+        Color:
+            rgba: 0.5, 0.5, 0.5, 0.5
+        Rectangle: #woohoo!!!
+            size: 800, 405
+            pos: self.pos
+    
+    #Makes the home screen and home bar
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
+
+        # Home Bar
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: None
+            height: 75
+
+            #Settings Button
+            Button:
+                size_hint_x: None
+                width: 65
+                background_normal: ''
+                background_color: (0,0,0,1)
+
+                Image:
+                    source: 'images/setting.png'
+                    size_hint_y: None
+                    height: 35
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+
+            #Blank Space
+            Button:
+                size_hint_x: None
+                width: 15
+                background_color: (0,0,0,1)
+            
+            #Chain Name
+            BoxLayout:
+                orientation: "vertical"
+                size_hint_x: None
+                width: 480
+
+                Label: 
+                    background_color: (0,0,0,1)
+                    size_hint_y: None
+                    height: 5
+                    
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+
+
+                Label: 
+                    text_size: self.size
+                    text: "Selected Chain"
+                    background_color: (0,0,0,1)
+                    font_size: 15
+                    size_hint_y: None
+                    height: 20
+
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+
+                Label: 
+                    background_color: (0,0,0,1)
+                    size_hint_y: None
+                    height: 5
+                    
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                
+                Label: 
+                    text_size: self.size
+                    text: "Chain 1"
+                    background_color: (0,0,0,1)
+                    font_size: 28
+                    size_hint_y: None
+                    height: 30
+                    
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                
+                Label: 
+                    background_color: (0,0,0,1)
+                    size_hint_y: None
+                    height: 10
+                    
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+
+            #Chain Menu Button
+            AnchorLayout:
+                anchor_x: 'center'
+                anchor_y: 'center'
+
+                Button:
+                    text: "All Chain Menu"
+                    color: (0,0,0,1)
+                    font_size: 20
+                    #size_hint: (.5,.5)    
+                    pos_hint: {'center_x': 'center_y'} 
+                    background_normal: 'images/rectangle.png'
+                    #background_down: 'images/rectangle.png'
+                    size_hint_y: None
+                    height: 32
+                    size_hint_x: None
+                    width: 170
+
+            #Blank Space Button
+            Button:
+                size_hint_x: None
+                width: 20     
+                background_color: (0,0,0,1)
+
+        
+        Button:
+            size_hint_x: None
+            width: 20     
+            background_color: (0,0,0,1)    
