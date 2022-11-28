@@ -24,6 +24,7 @@
                 width: 65
                 background_normal: ''
                 background_color: (0,0,0,1)
+                on_press: app.root.current = "settings"
 
                 Image:
                     source: 'images/setting.png'
@@ -151,7 +152,7 @@
                     font_size: 20
                     pos_hint: {'center_x': 'center_y'} 
                     background_normal: 'images/recta.png'
-                    on_press: app.root.current = "setting"
+                    on_press: app.root.current = "settings"
                     #background_down: 'images/recta.png'
 
             AnchorLayout:
