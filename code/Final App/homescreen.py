@@ -30,7 +30,7 @@ kv = Builder.load_file('windowmanager.kv')
 
 class AwesomeApp(App):
     def build(self):
-        Window.size = (800, 480)
+        Window.size = (400, 240)
         Window.clearcolor = (0,0,0,1)
         return kv
 
