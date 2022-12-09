@@ -1,0 +1,103 @@
+<TuneScreen>
+    name: "tune"
+    canvas:
+        Color:
+            rgba: 0.5, 0.5, 0.5, 0.5
+        Rectangle: #woohoo!!!
+            size: 800, 405
+            pos: self.pos
+    
+    #Makes the home screen and home bar
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
+
+        # Home Bar
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: None
+            height: 75
+            #Settings Button
+            Button:
+                size_hint_x: None
+                width: 65
+                background_normal: ''
+                background_color: (0,0,0,1)
+                on_press: app.root.current = "home"
+
+                Image:
+                    source: 'images/arrow1.png'
+                    size_hint_y: None
+                    height: 35
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+                
+            #Settings Name
+            Label: 
+                #text_size: self.size
+                text: "Settings"
+                background_color: (0,0,0,1)
+                #font_size: 15
+                #size_hint_y: None
+                #height: 20
+
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+            #Blank Space
+            Button:
+                size_hint_x: None
+                width: 550
+                background_color: (0,0,0,1)
+
+        
+        GridLayout:
+            cols: 1
+            #size: root.width, root.height
+            Button:
+                size_hint_y: None
+                width: 250
+                background_color: (0,0,0,0)
+
+            Label:
+                text: "Sustain:  " + str(sustainslider.value)
+
+            Slider:
+                id: sustainslider
+                min: 0
+                max: 100
+                step: 1
+                orientation: 'horizontal'
+            
+            
+
+            Label:
+                text: "Level:  " + str(levelslider.value)
+
+            Slider:
+                id: levelslider
+                min: 0
+                max: 100
+                step: 1
+                orientation: 'horizontal'
+
+            
+            Label:
+                text: "Blend:  " + str(blendslider.value)
+
+            Slider:
+                id: blendslider
+                min: 0
+                max: 100
+                step: 1
+                orientation: 'horizontal'
+
+           
+
+            
+
+        
