@@ -19,6 +19,9 @@ class HomeScreen(Screen):
 class SettingsScreen(Screen): 
     pass
 
+class ChainMenu(Screen):
+    pass
+
 class WindowManager(ScreenManager):
     pass
 

@@ -1,0 +1,146 @@
+<ChainMenu>
+    name: "chainmenu"
+    canvas:
+        #Color:
+         #   rgba: 0.5, 0.5, 0.5, 0.5
+        Rectangle: #woohoo!!!
+            size: 800, 405
+            pos: self.pos
+            source: 'images/group1.png'
+    
+    #Makes the home screen and home bar
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
+
+        # Top Bar
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: None
+            height: 75
+            #Back Button
+            Button:
+                size_hint_x: None
+                width: 65
+                background_normal: ''
+                background_color: (0,0,0,1)
+                on_press: app.root.current = "home"
+
+                Image:
+                    source: 'images/arrow1.png'
+                    size_hint_y: None
+                    height: 35
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+                
+            #Chain Menu Name
+            Label: 
+                #text_size: self.size
+                text: "Chain Menu"
+                background_color: (0,0,0,1)
+                #font_size: 15
+                #size_hint_y: None
+                #height: 20
+
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+            #Blank Space
+            Button:
+                size_hint_x: None
+                width: 550
+                background_color: (0,0,0,1)
+        
+        Label: 
+            text_size: self.size
+            text: "Selected Chain: No Chain Selected"
+            background_color: (0,0,0,1)
+            font_size: 22
+            size_hint_y: None
+            height: 35
+
+        #Home Screen Interface
+        GridLayout:
+            cols: 3
+            
+            AnchorLayout:
+                anchor_x: 'center'
+                anchor_y: 'center'
+                Button:
+                    text: "Chain 1"
+                    #size_hint_x: None
+                    color: (0,0,0,1)
+                    size_hint: (.8,.7)
+                    font_size: 20
+                    pos_hint: {'center_x': 'center_y'} 
+                    background_normal: 'images/rectchain.png'
+                    on_press: app.root.current = "settings"
+                    #background_down: 'images/recta.png'
+
+            AnchorLayout:
+                anchor_x: 'center'
+                anchor_y: 'center'        
+                Button:
+                    text: "Chain 2"
+                    color: (0,0,0,1)
+                    size_hint: (.8,.7)
+                    font_size: 20
+                    pos_hint: {'center_x': 'center_y'} 
+                    background_normal: 'images/rectchain.png'
+                    #background_down: 'images/rectb.png'
+
+            AnchorLayout:
+                anchor_x: 'center'
+                anchor_y: 'center'        
+                Button:
+                    text: "Chain 3"
+                    color: (0,0,0,1)
+                    size_hint: (.8,.7)
+                    font_size: 20
+                    pos_hint: {'center_x': 'center_y'} 
+                    background_normal: 'images/rectchain.png'
+                    #background_down: 'images/rectc.png'
+
+            AnchorLayout:
+                anchor_x: 'center'
+                anchor_y: 'center'            
+                Button:
+                    text: "Chain 4"
+                    color: (0,0,0,1)
+                    size_hint: (.8,.7)
+                    font_size: 20
+                    pos_hint: {'center_x': 'center_y'} 
+                    background_normal: 'images/rectchain.png'
+                    #background_down: 'images/rectd.png'
+
+            AnchorLayout:
+                anchor_x: 'center'
+                anchor_y: 'center'            
+                Button:
+                    text: "Chain 5"
+                    color: (0,0,0,1)
+                    size_hint: (.8,.7)
+                    font_size: 20
+                    pos_hint: {'center_x': 'center_y'} 
+                    background_normal: 'images/rectchain.png'
+                    #background_down: 'images/recte.png'
+
+            AnchorLayout:
+                anchor_x: 'center'
+                anchor_y: 'center'            
+                Button:
+                    text: "Effect 6"
+                    color: (0,0,0,1)
+                    size_hint: (.8,.7)
+                    font_size: 20
+                    pos_hint: {'center_x': 'center_y'} 
+                    background_normal: 'images/rectchain.png'
+                    #background_down: 'images/rectf.png'
+            
+
+
+        
