@@ -64,7 +64,22 @@
                 background_color: (0,0,0,0)
 
             Label:
-                text: str(slider.value)
+                text: "Volume:  " + str(volslider.value)
+
+            Slider:
+                id: volslider
+                min: 0
+                max: 100
+                step: 1
+                orientation: 'horizontal'
+            
+            Button:
+                size_hint_y: None
+                width: 250
+                background_color: (0,0,0,0)
+
+            Label:
+                text: "Brightness:  " + str(slider.value)
 
             Slider:
                 id: slider
@@ -77,3 +92,20 @@
                 size_hint_y: None
                 width: 250
                 background_color: (0,0,0,0)
+
+            AnchorLayout:
+                anchor_x: 'center'
+                anchor_y: 'bottom'
+            
+                Button:
+                    id: btnExit
+                    text: "Exit Program"
+                    size_hint_y: None
+                    height: 50
+                    #size_hint_x: None
+                    #width: 250
+                    on_press: app.stop()
+                    pos_hint: {'center_x': 'top_y'} 
+                    background_color: (1,0,0,1)
+
+        
