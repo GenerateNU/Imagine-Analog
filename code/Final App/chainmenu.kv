@@ -1,12 +1,11 @@
 <ChainMenu>
     name: "chainmenu"
     canvas:
-        #Color:
-         #   rgba: 0.5, 0.5, 0.5, 0.5
+        Color:
+            rgba: 0.5, 0.5, 0.5, 0.5
         Rectangle: #woohoo!!!
             size: 800, 405
             pos: self.pos
-            source: 'images/group1.png'
     
     #Makes the home screen and home bar
     GridLayout:
@@ -78,7 +77,7 @@
                     font_size: 20
                     pos_hint: {'center_x': 'center_y'} 
                     background_normal: 'images/rectchain.png'
-                    on_press: app.root.current = "settings"
+                    on_press: app.root.current = "tune"
                     #background_down: 'images/recta.png'
 
             AnchorLayout:
@@ -92,6 +91,7 @@
                     pos_hint: {'center_x': 'center_y'} 
                     background_normal: 'images/rectchain.png'
                     #background_down: 'images/rectb.png'
+                    on_press: app.root.current = "tune"
 
             AnchorLayout:
                 anchor_x: 'center'
@@ -104,6 +104,7 @@
                     pos_hint: {'center_x': 'center_y'} 
                     background_normal: 'images/rectchain.png'
                     #background_down: 'images/rectc.png'
+                    on_press: app.root.current = "tune"
 
             AnchorLayout:
                 anchor_x: 'center'
@@ -116,6 +117,7 @@
                     pos_hint: {'center_x': 'center_y'} 
                     background_normal: 'images/rectchain.png'
                     #background_down: 'images/rectd.png'
+                    on_press: app.root.current = "tune"
 
             AnchorLayout:
                 anchor_x: 'center'
@@ -128,6 +130,7 @@
                     pos_hint: {'center_x': 'center_y'} 
                     background_normal: 'images/rectchain.png'
                     #background_down: 'images/recte.png'
+                    on_press: app.root.current = "tune"
 
             AnchorLayout:
                 anchor_x: 'center'
@@ -140,6 +143,7 @@
                     pos_hint: {'center_x': 'center_y'} 
                     background_normal: 'images/rectchain.png'
                     #background_down: 'images/rectf.png'
+                    on_press: app.root.current = "tune"
             
 
 

@@ -22,6 +22,9 @@ class SettingsScreen(Screen):
 class ChainMenu(Screen):
     pass
 
+class TuneScreen(Screen):
+    pass
+
 class WindowManager(ScreenManager):
     pass
 
@@ -33,7 +36,10 @@ kv = Builder.load_file('windowmanager.kv')
 
 class AwesomeApp(App):
     def build(self):
-        Window.size = (400, 240)
+        #Window.size = (400, 240)
+        Window.size = (800, 480)
+        Window.fullscreen = 'auto'
+        Window.show_cursor = False
         Window.clearcolor = (0,0,0,1)
         return kv
 
